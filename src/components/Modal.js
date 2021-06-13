@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
@@ -31,8 +31,6 @@ function TransitionsModal(props) {
 
   const [tempTitle, setTemptitle] = React.useState(title);
   const [tempContent, setTempContent] = React.useState(content);
-
-  const [formError, setFormError] = useState("");
 
   const handleClose = () => {
     props.handleModal(false, {});
@@ -75,7 +73,6 @@ function TransitionsModal(props) {
               autoComplete="off"
               style={{ width: 300, marginTop: "40px" }}
               value={tempTitle}
-              helperText={formError}
               onChange={(e) => {
                 e.preventDefault();
                 setTemptitle(e.target.value);
@@ -90,7 +87,6 @@ function TransitionsModal(props) {
               autoComplete="off"
               style={{ width: 300, marginTop: "40px" }}
               value={tempContent}
-              helperText={formError}
               onChange={(e) => {
                 e.preventDefault();
                 setTempContent(e.target.value);
