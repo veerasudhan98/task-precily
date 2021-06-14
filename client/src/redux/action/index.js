@@ -12,12 +12,14 @@ import {
   UPDATE_CONTENT_FAILED,
 } from "./type";
 
+const URL = "http://localhost:5000";
+
 export const fetchContent = () => async (dispatch) => {
   dispatch({ type: FETCH_CONTENT });
   try {
     const response = await axios({
       method: "get",
-      url: "http://localhost:5000/posts/",
+      url: `${URL}/posts/`,
     });
     dispatch({ type: FETCH_CONTENT_SUCCESS, payload: response.data });
   } catch (e) {
@@ -32,7 +34,7 @@ export const updateContent = (updatedContent) => async (dispatch) => {
   try {
     const response = await axios({
       method: "patch",
-      url: `http://localhost:5000/posts/${updatedContent._id}`,
+      url: `${URL}/posts/${updatedContent._id}`,
       data: updatedContent,
     });
     console.log(response.data);

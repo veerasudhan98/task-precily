@@ -12,9 +12,6 @@ const postSchema = mongoose.Schema({
     maxlength: [40, "Content shouldn't be not more than 40 characters"],
     minlength: [5, "Content shouldn't be lesser than 5 characters"],
   },
-  //   image: {
-  //     type: Buffer,
-  //   },
   createdAt: {
     type: Date,
     default: new Date(),
