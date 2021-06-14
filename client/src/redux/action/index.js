@@ -24,7 +24,6 @@ export const fetchContent = () => async (dispatch) => {
     dispatch({ type: FETCH_CONTENT_SUCCESS, payload: response.data });
   } catch (e) {
     console.log(e);
-    toastr.error(e.response.data.error);
     dispatch({ type: FETCH_CONTENT_FAILED });
   }
 };
