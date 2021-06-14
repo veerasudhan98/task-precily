@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "env-cmd -f config/dev.env nodemon index.js",
+    "start": "node index.js",
     "client": "npm start --prefix client",
     "server": "env-cmd -f config/dev.env nodemon index.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
