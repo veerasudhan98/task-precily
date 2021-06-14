@@ -9,6 +9,7 @@ import {
   UPDATE_CONTENT_FAILED,
 } from "../action/type";
 
+//initial state for redux
 const initialState = {
   list: [],
   modal: false,
