@@ -16,7 +16,7 @@
     "react-grid-layout": "^1.2.5",
     "react-redux": "^7.2.4",
     "react-redux-toastr": "^7.6.5",
-    "react-scripts": "^1.1.5",
+    "react-scripts": "^4.0.3",
     "redux": "^4.1.0",
     "redux-persist": "^6.0.0",
     "redux-thunk": "^2.3.0",
