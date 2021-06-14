@@ -17,7 +17,7 @@ const initialState = {
   selected: {},
 };
 
-export default function (state = initialState, action) {
+export default function contentReducer(state = initialState, action) {
   switch (action.type) {
     case FETCH_CONTENT: {
       return {
